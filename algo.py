@@ -16,7 +16,7 @@ print(a)
 
 linDernierPivot = -1
 
-for col in range(0,n):
+for col in range(0,n-1):
 
     # Recherche du coefficient le plus grand de la colonne j
     maxi = a[linDernierPivot + 1, col]
@@ -28,8 +28,7 @@ for col in range(0,n):
 
     # Si le max est 0, on ne fait rien et on passe à la ligne suivante sinon on fait quelques opérations
     if maxi != 0:
-        if linDernierPivot + 2 < m:
-            linDernierPivot = linDernierPivot + 1
+        linDernierPivot = linDernierPivot + 1
 
         # On divise la ligne du pivot par la valeur du pivot pour avoir un pivot qui vaut 1
         for y in range(0,n): # On parcourt les colonnes
